@@ -12,6 +12,7 @@
 		8FCA1A351DB1A3AB000DC195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1A331DB1A3AB000DC195 /* Main.storyboard */; };
 		8FCA1A371DB1A3AB000DC195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1A361DB1A3AB000DC195 /* Assets.xcassets */; };
 		8FCA1A3A1DB1A3AB000DC195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1A381DB1A3AB000DC195 /* LaunchScreen.storyboard */; };
+		8FCA1A441DB1A3D1000DC195 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA1A431DB1A3D1000DC195 /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		8FCA1A361DB1A3AB000DC195 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FCA1A391DB1A3AB000DC195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FCA1A3B1DB1A3AB000DC195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FCA1A411DB1A3D0000DC195 /* Giraffe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Giraffe-Bridging-Header.h"; sourceTree = "<group>"; };
+		8FCA1A421DB1A3D1000DC195 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = ../SWRevealViewController.h; sourceTree = "<group>"; };
+		8FCA1A431DB1A3D1000DC195 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = ../SWRevealViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +44,8 @@
 			children = (
 				8FCA1A2E1DB1A3AB000DC195 /* Giraffe */,
 				8FCA1A2D1DB1A3AB000DC195 /* Products */,
+				8FCA1A451DB1A3D6000DC195 /* 3rd part */,
+				8FCA1A411DB1A3D0000DC195 /* Giraffe-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +67,16 @@
 				8FCA1A381DB1A3AB000DC195 /* LaunchScreen.storyboard */,
 				8FCA1A3B1DB1A3AB000DC195 /* Info.plist */,
 			);
+			path = Giraffe;
+			sourceTree = "<group>";
+		};
+		8FCA1A451DB1A3D6000DC195 /* 3rd part */ = {
+			isa = PBXGroup;
+			children = (
+				8FCA1A421DB1A3D1000DC195 /* SWRevealViewController.h */,
+				8FCA1A431DB1A3D1000DC195 /* SWRevealViewController.m */,
+			);
+			name = "3rd part";
 			path = Giraffe;
 			sourceTree = "<group>";
 		};
@@ -97,6 +113,7 @@
 					8FCA1A2B1DB1A3AB000DC195 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = CHQZVY32S2;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -139,6 +156,7 @@
 			files = (
 				8FCA1A321DB1A3AB000DC195 /* ViewController.swift in Sources */,
 				8FCA1A301DB1A3AB000DC195 /* AppDelegate.swift in Sources */,
+				8FCA1A441DB1A3D1000DC195 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,11 +277,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = CHQZVY32S2;
 				INFOPLIST_FILE = Giraffe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acadom.giraffe.Giraffe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Giraffe-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,11 +293,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = CHQZVY32S2;
 				INFOPLIST_FILE = Giraffe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acadom.giraffe.Giraffe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Giraffe-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
