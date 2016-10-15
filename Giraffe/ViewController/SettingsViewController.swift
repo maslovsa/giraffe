@@ -18,7 +18,11 @@ class SettingsViewController: BaseRevealViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //loginButton.readPermissions = ["public_profile", "email", "user_friends"]
+        
+        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
+        loginButton.center = view.center
+        
+        view.addSubview(loginButton)
     }
     
     override func didReceiveMemoryWarning() {
