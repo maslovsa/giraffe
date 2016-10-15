@@ -16,7 +16,6 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var authorLabel:UILabel!
 
     
-    
     override func awakeFromNib() {
         super.awakeFromNib()
     }

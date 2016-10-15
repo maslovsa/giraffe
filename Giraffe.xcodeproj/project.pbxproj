@@ -24,6 +24,7 @@
 		8FCA1A351DB1A3AB000DC195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1A331DB1A3AB000DC195 /* Main.storyboard */; };
 		8FCA1A371DB1A3AB000DC195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1A361DB1A3AB000DC195 /* Assets.xcassets */; };
 		8FCA1A3A1DB1A3AB000DC195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1A381DB1A3AB000DC195 /* LaunchScreen.storyboard */; };
+		8FE38F7E1DB2768F00EB9B47 /* MainMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F7D1DB2768F00EB9B47 /* MainMenuCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +36,8 @@
 		8F09F51A1DB24AD30028C61D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8F09F51B1DB24AD30028C61D /* Utilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		8F09F51D1DB24AD30028C61D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		8F09F51E1DB24AD30028C61D /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
-		8F09F51F1DB24AD30028C61D /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		8F09F51E1DB24AD30028C61D /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ../ViewController/MenuController.swift; sourceTree = "<group>"; };
+		8F09F51F1DB24AD30028C61D /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = ViewController/NewsTableViewCell.swift; sourceTree = "<group>"; };
 		8F09F5201DB24AD30028C61D /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		8F09F5211DB24AD30028C61D /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		8F09F5221DB24AD30028C61D /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		8FCA1A391DB1A3AB000DC195 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FCA1A3B1DB1A3AB000DC195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FCA1A411DB1A3D0000DC195 /* Giraffe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Giraffe-Bridging-Header.h"; sourceTree = "<group>"; };
+		8FE38F7D1DB2768F00EB9B47 /* MainMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
 		9757B71E694D00165C6461A5 /* Pods-Giraffe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giraffe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Giraffe/Pods-Giraffe.debug.xcconfig"; sourceTree = "<group>"; };
 		A013546D92992A7789B41577 /* Pods-Giraffe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giraffe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Giraffe/Pods-Giraffe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				8F09F5191DB24AD30028C61D /* BaseRevealViewController.swift */,
+				8F09F51E1DB24AD30028C61D /* MenuController.swift */,
 				8F09F51A1DB24AD30028C61D /* ViewController.swift */,
 			);
 			path = Base;
@@ -96,8 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				8F09F51D1DB24AD30028C61D /* MapViewController.swift */,
-				8F09F51E1DB24AD30028C61D /* MenuController.swift */,
-				8F09F51F1DB24AD30028C61D /* NewsTableViewCell.swift */,
 				8F09F5201DB24AD30028C61D /* NewsTableViewController.swift */,
 				8F09F5211DB24AD30028C61D /* PhotoViewController.swift */,
 				8F09F5221DB24AD30028C61D /* QRViewController.swift */,
@@ -130,15 +131,25 @@
 			children = (
 				8FCA1A2F1DB1A3AB000DC195 /* AppDelegate.swift */,
 				8F09F5151DB24AD30028C61D /* 3rd Part */,
+				8FE38F7C1DB2765500EB9B47 /* Cells */,
 				8F09F5181DB24AD30028C61D /* Base */,
-				8F09F51B1DB24AD30028C61D /* Utilites.swift */,
 				8F09F51C1DB24AD30028C61D /* ViewController */,
+				8F09F51B1DB24AD30028C61D /* Utilites.swift */,
 				8FCA1A361DB1A3AB000DC195 /* Assets.xcassets */,
 				8FCA1A331DB1A3AB000DC195 /* Main.storyboard */,
 				8FCA1A381DB1A3AB000DC195 /* LaunchScreen.storyboard */,
 				8FCA1A3B1DB1A3AB000DC195 /* Info.plist */,
 			);
 			path = Giraffe;
+			sourceTree = "<group>";
+		};
+		8FE38F7C1DB2765500EB9B47 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8F09F51F1DB24AD30028C61D /* NewsTableViewCell.swift */,
+				8FE38F7D1DB2768F00EB9B47 /* MainMenuCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		DB858153A3C70EB0E760DCB4 /* Pods */ = {
@@ -276,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F09F5291DB24AD30028C61D /* MenuController.swift in Sources */,
+				8FE38F7E1DB2768F00EB9B47 /* MainMenuCell.swift in Sources */,
 				8F09F5261DB24AD30028C61D /* ViewController.swift in Sources */,
 				8FCA1A301DB1A3AB000DC195 /* AppDelegate.swift in Sources */,
 				8F09F5251DB24AD30028C61D /* BaseRevealViewController.swift in Sources */,
