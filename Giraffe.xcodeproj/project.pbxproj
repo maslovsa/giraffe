@@ -13,6 +13,9 @@
 		8F09F5071DB210B50028C61D /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5021DB210B50028C61D /* NewsTableViewController.swift */; };
 		8F09F5081DB210B50028C61D /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5031DB210B50028C61D /* PhotoViewController.swift */; };
 		8F09F50B1DB21A100028C61D /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F50A1DB21A100028C61D /* QRViewController.swift */; };
+		8F09F50D1DB234CB0028C61D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F50C1DB234CB0028C61D /* SettingsViewController.swift */; };
+		8F09F50F1DB236830028C61D /* BaseRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F50E1DB236830028C61D /* BaseRevealViewController.swift */; };
+		8F09F5121DB243890028C61D /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5111DB243890028C61D /* Utilites.swift */; };
 		8FCA1A301DB1A3AB000DC195 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA1A2F1DB1A3AB000DC195 /* AppDelegate.swift */; };
 		8FCA1A321DB1A3AB000DC195 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FCA1A311DB1A3AB000DC195 /* ViewController.swift */; };
 		8FCA1A351DB1A3AB000DC195 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1A331DB1A3AB000DC195 /* Main.storyboard */; };
@@ -28,6 +31,9 @@
 		8F09F5021DB210B50028C61D /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		8F09F5031DB210B50028C61D /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = SOURCE_ROOT; };
 		8F09F50A1DB21A100028C61D /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
+		8F09F50C1DB234CB0028C61D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		8F09F50E1DB236830028C61D /* BaseRevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRevealViewController.swift; sourceTree = "<group>"; };
+		8F09F5111DB243890028C61D /* Utilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		8FCA1A2C1DB1A3AB000DC195 /* Giraffe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Giraffe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FCA1A2F1DB1A3AB000DC195 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FCA1A311DB1A3AB000DC195 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,14 +69,24 @@
 		8F09F5091DB217CB0028C61D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8F09F5101DB2368C0028C61D /* Base */,
 				8F09F5011DB210B50028C61D /* NewsTableViewCell.swift */,
 				8F09F5021DB210B50028C61D /* NewsTableViewController.swift */,
 				8F09F5031DB210B50028C61D /* PhotoViewController.swift */,
+				8F09F50C1DB234CB0028C61D /* SettingsViewController.swift */,
 				8F09F50A1DB21A100028C61D /* QRViewController.swift */,
-				8FCA1A311DB1A3AB000DC195 /* ViewController.swift */,
 				8F09F4FF1DB210B50028C61D /* MapViewController.swift */,
 			);
 			name = ViewController;
+			sourceTree = "<group>";
+		};
+		8F09F5101DB2368C0028C61D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8F09F50E1DB236830028C61D /* BaseRevealViewController.swift */,
+				8FCA1A311DB1A3AB000DC195 /* ViewController.swift */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		8FCA1A231DB1A3AB000DC195 = {
@@ -96,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				8FCA1A2F1DB1A3AB000DC195 /* AppDelegate.swift */,
+				8F09F5111DB243890028C61D /* Utilites.swift */,
 				8F09F5091DB217CB0028C61D /* ViewController */,
 				8FCA1A331DB1A3AB000DC195 /* Main.storyboard */,
 				8FCA1A361DB1A3AB000DC195 /* Assets.xcassets */,
@@ -191,12 +208,15 @@
 			files = (
 				8FCA1A321DB1A3AB000DC195 /* ViewController.swift in Sources */,
 				8F09F5061DB210B50028C61D /* NewsTableViewCell.swift in Sources */,
+				8F09F50F1DB236830028C61D /* BaseRevealViewController.swift in Sources */,
 				8FCA1A301DB1A3AB000DC195 /* AppDelegate.swift in Sources */,
+				8F09F5121DB243890028C61D /* Utilites.swift in Sources */,
 				8FCA1A441DB1A3D1000DC195 /* SWRevealViewController.m in Sources */,
 				8F09F50B1DB21A100028C61D /* QRViewController.swift in Sources */,
 				8F09F5081DB210B50028C61D /* PhotoViewController.swift in Sources */,
 				8F09F5071DB210B50028C61D /* NewsTableViewController.swift in Sources */,
 				8F09F5041DB210B50028C61D /* MapViewController.swift in Sources */,
+				8F09F50D1DB234CB0028C61D /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

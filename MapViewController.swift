@@ -8,21 +8,13 @@
 
 import UIKit
 
-class MapViewController: UIViewController {
-    @IBOutlet weak var menuButton:UIBarButtonItem!
+class MapViewController: BaseRevealViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            
-            self.revealViewController().rearViewRevealWidth = 62
-        }
+
+        self.revealViewController().rearViewRevealWidth = 62
         
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

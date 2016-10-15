@@ -29,6 +29,7 @@
                         <segue destination="YST-2z-g0L" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="Gba-kT-qkE"/>
                         <segue destination="0J7-Hk-VFu" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="TT8-ux-rO2"/>
                         <segue destination="QFS-KZ-aWE" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSeguePushController" id="Js1-uJ-kt4"/>
+                        <segue destination="3eM-7P-QSr" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSeguePushController" id="b1E-Nz-a8M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -210,6 +211,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.92620444297790527" green="0.93612229824066162" blue="0.94110381603240967" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="3eM-7P-QSr" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="fP4-Pi-v9Y"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="son_cell" rowHeight="60" id="ndk-jA-avy">
                                         <rect key="frame" x="0.0" y="133" width="375" height="60"/>
@@ -333,7 +337,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </mapView>
             </objects>
-            <point key="canvasLocation" x="685.60000000000002" y="-687.7061469265368"/>
+            <point key="canvasLocation" x="-239" y="-687"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a23-LC-1XJ">
@@ -506,6 +510,61 @@
             </objects>
             <point key="canvasLocation" x="1764" y="1480"/>
         </scene>
+        <!--Settings-->
+        <scene sceneID="k71-a1-JXm">
+            <objects>
+                <viewController id="TE9-KR-HRU" customClass="SettingsViewController" customModule="Giraffe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="brk-KN-qd8"/>
+                        <viewControllerLayoutGuide type="bottom" id="O5u-AO-nXt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hie-Uv-52T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="father" translatesAutoresizingMaskIntoConstraints="NO" id="Yy7-Fc-T08">
+                                <rect key="frame" x="123" y="72" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="0oD-s2-TN5"/>
+                                    <constraint firstAttribute="width" constant="128" id="yID-vx-7jf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Yy7-Fc-T08" firstAttribute="centerX" secondItem="hie-Uv-52T" secondAttribute="centerX" id="Svx-rv-xsa"/>
+                            <constraint firstItem="Yy7-Fc-T08" firstAttribute="top" secondItem="brk-KN-qd8" secondAttribute="bottom" constant="8" id="cuf-PB-2UB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="Rqa-Qz-eYv">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="kct-iu-ewd"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuButton" destination="kct-iu-ewd" id="xao-dL-dBb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MDs-S8-zfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2576.8000000000002" y="-1351.5742128935533"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="35w-ac-yua">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3eM-7P-QSr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zbf-e9-lkp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="TE9-KR-HRU" kind="relationship" relationship="rootViewController" id="xxS-9h-Sp1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c0x-Aq-gzX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="-1351"/>
+        </scene>
     </scenes>
     <resources>
         <image name="father" width="154" height="172"/>
@@ -518,6 +577,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="PRW-OQ-Awp"/>
+        <segue reference="fP4-Pi-v9Y"/>
         <segue reference="OTB-q5-BD3"/>
         <segue reference="oky-ai-n4s"/>
         <segue reference="27w-Fq-K0m"/>

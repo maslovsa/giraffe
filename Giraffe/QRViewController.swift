@@ -10,8 +10,7 @@
 import UIKit
 import AVFoundation
 
-class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    @IBOutlet weak var menuButton:UIBarButtonItem!
+class QRViewController: BaseRevealViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     @IBOutlet weak var messageLabel:UILabel!
     
@@ -24,12 +23,6 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        }
         
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
         // as the media type parameter.
