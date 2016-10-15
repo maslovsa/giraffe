@@ -7,7 +7,7 @@ target 'Giraffe' do
 
 pod 'Alamofire', '~> 4.0'
 pod 'SDWebImage'
-pod 'FBSDKCoreKit'
-pod 'FBSDKLoginKit'
+pod 'FacebookCore'
+pod 'FacebookLogin'
 
 end
