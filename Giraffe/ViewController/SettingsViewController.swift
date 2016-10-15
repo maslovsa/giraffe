@@ -42,6 +42,11 @@ class SettingsViewController: BaseRevealViewController {
                         print("User Name is: \(userName)")
                         UserDefaults.standard.set(userName, forKey: kFacebookUserNameKey)
                     }
+                    if let userId = params["id"] {
+                        print("User id is: \(userId)")
+                        UserDefaults.standard.set(userId, forKey: kFacebookUserIdKey)
+                        
+                    }
                 }
             } else {
                 print("\(error)")

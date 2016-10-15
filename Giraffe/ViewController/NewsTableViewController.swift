@@ -41,7 +41,7 @@ class NewsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 3
+        return 2
     }
 
     
@@ -50,23 +50,13 @@ class NewsTableViewController: UITableViewController {
 
         // Configure the cell...
         if (indexPath as NSIndexPath).row == 0 {
-            cell.postImageView.image = UIImage(named: "watchkit-intro")
-            cell.postTitleLabel.text = "WatchKit Introduction: Building a Simple Guess Game"
-            cell.authorLabel.text = "Simon Ng"
-            cell.authorImageView.image = UIImage(named: "author")
-
-        } else if (indexPath as NSIndexPath).row == 1 {
-            cell.postImageView.image = UIImage(named: "custom-segue-featured-1024")
-            cell.postTitleLabel.text = "Building a Chat App in Swift Using Multipeer Connectivity Framework"
-            cell.authorLabel.text = "Gabriel Theodoropoulos"
-            cell.authorImageView.image = UIImage(named: "appcoda-300")
-            
+            cell.postImageView.image = UIImage(named: "news")
+            cell.postTitleLabel.text = "Супер газета"
+            cell.authorLabel.text = "5 из 20"
         } else {
-            cell.postImageView.image = UIImage(named: "webkit-featured")
-            cell.postTitleLabel.text = "A Beginner’s Guide to Animated Custom Segues in iOS 8"
-            cell.authorLabel.text = "Gabriel Theodoropoulos"
-            cell.authorImageView.image = UIImage(named: "appcoda-300")
-            
+            cell.postImageView.image = UIImage(named: "map")
+            cell.postTitleLabel.text = "Супер путешествие"
+            cell.authorLabel.text = "10 из 20"
         }
 
         return cell
