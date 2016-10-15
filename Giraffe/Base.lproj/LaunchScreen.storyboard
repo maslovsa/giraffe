@@ -22,10 +22,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_transparent" translatesAutoresizingMaskIntoConstraints="NO" id="K95-45-Xuz">
-                                <rect key="frame" x="87" y="233" width="200" height="200"/>
+                                <rect key="frame" x="59" y="205" width="256" height="256"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="34V-N3-9gE"/>
-                                    <constraint firstAttribute="height" constant="200" id="VTw-IG-6yG"/>
+                                    <constraint firstAttribute="width" constant="256" id="34V-N3-9gE"/>
+                                    <constraint firstAttribute="height" constant="256" id="VTw-IG-6yG"/>
                                 </constraints>
                             </imageView>
                         </subviews>
