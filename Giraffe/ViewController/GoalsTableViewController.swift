@@ -10,7 +10,7 @@ import UIKit
 
 class GoalsTableViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
-
+    var goals = [GoalItem]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +20,12 @@ class GoalsTableViewController: UITableViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
+        DataManager.sharedInstance.getGoals { (goals) in
+            self.goals = goals
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -41,23 +47,19 @@ class GoalsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return 2
+        return self.goals.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! GoalTableViewCell
+        
+        let goal = DataManager.sharedInstance.goals[indexPath.row]
+        
+        cell.goalImageView.image = UIImage(named: goal.image)
+        cell.titleLabel.text = goal.title
+        cell.progressLabel.text = "\(goal.current) из \(goal.total)"
 
-        // Configure the cell...
-        if (indexPath as NSIndexPath).row == 0 {
-            cell.goalImageView.image = UIImage(named: "news")
-            cell.titleLabel.text = "Супер газета"
-            cell.progressLabel.text = "5 из 20"
-        } else {
-            cell.goalImageView.image = UIImage(named: "map")
-            cell.titleLabel.text = "Супер путешествие"
-            cell.progressLabel.text = "10 из 20"
-        }
         return cell
     }
     

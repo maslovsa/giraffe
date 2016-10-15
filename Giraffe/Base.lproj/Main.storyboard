@@ -126,6 +126,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95935815570000005" green="0.8257856965" blue="0.63795161249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" red="0.95935815570000005" green="0.8257856965" blue="0.63795161249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="m7N-Q8-5h6" customClass="GoalTableViewCell" customModule="Giraffe" customModuleProvider="target">
@@ -215,7 +216,7 @@
                                                         <constraint firstAttribute="width" secondItem="ckB-Nf-f7U" secondAttribute="height" id="xup-cS-coC"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сынок" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfj-8I-3Bb">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сергей" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfj-8I-3Bb">
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="KJd-qB-19F"/>
                                                     </constraints>
@@ -229,7 +230,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="ckB-Nf-f7U" secondAttribute="bottom" id="Loh-0m-pEd"/>
                                                 <constraint firstItem="Kfj-8I-3Bb" firstAttribute="centerX" secondItem="ckB-Nf-f7U" secondAttribute="centerX" id="lLc-K8-JET"/>
                                                 <constraint firstItem="ckB-Nf-f7U" firstAttribute="centerX" secondItem="mav-NV-Wjh" secondAttribute="centerX" id="sFY-tX-CLq"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Kfj-8I-3Bb" secondAttribute="bottom" constant="11" id="srH-r4-XE8"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Kfj-8I-3Bb" secondAttribute="bottom" constant="9" id="srH-r4-XE8"/>
                                                 <constraint firstItem="Kfj-8I-3Bb" firstAttribute="width" secondItem="ckB-Nf-f7U" secondAttribute="width" id="ymN-EJ-pYb"/>
                                             </constraints>
                                         </tableViewCellContentView>

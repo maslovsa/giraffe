@@ -29,6 +29,8 @@
 		8FE38F861DB298DE00EB9B47 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F851DB298DE00EB9B47 /* Constants.swift */; };
 		8FE38F881DB2996300EB9B47 /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F871DB2996300EB9B47 /* UserInfoCell.swift */; };
 		8FE38F8A1DB2A07A00EB9B47 /* TextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F891DB2A07A00EB9B47 /* TextCell.swift */; };
+		8FE38F8E1DB2B97A00EB9B47 /* GoalItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F8D1DB2B97A00EB9B47 /* GoalItem.swift */; };
+		8FE38F901DB2BB3200EB9B47 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F8F1DB2BB3200EB9B47 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		8FE38F851DB298DE00EB9B47 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8FE38F871DB2996300EB9B47 /* UserInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
 		8FE38F891DB2A07A00EB9B47 /* TextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextCell.swift; sourceTree = "<group>"; };
+		8FE38F8D1DB2B97A00EB9B47 /* GoalItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalItem.swift; sourceTree = "<group>"; };
+		8FE38F8F1DB2BB3200EB9B47 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		9757B71E694D00165C6461A5 /* Pods-Giraffe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giraffe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Giraffe/Pods-Giraffe.debug.xcconfig"; sourceTree = "<group>"; };
 		A013546D92992A7789B41577 /* Pods-Giraffe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giraffe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Giraffe/Pods-Giraffe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				8FCA1A2F1DB1A3AB000DC195 /* AppDelegate.swift */,
+				8FE38F8C1DB2B96D00EB9B47 /* Model */,
 				8F09F5151DB24AD30028C61D /* 3rd Part */,
 				8FE38F7C1DB2765500EB9B47 /* Cells */,
 				8F09F5181DB24AD30028C61D /* Base */,
@@ -162,6 +167,15 @@
 				8FE38F871DB2996300EB9B47 /* UserInfoCell.swift */,
 			);
 			name = Cells;
+			sourceTree = "<group>";
+		};
+		8FE38F8C1DB2B96D00EB9B47 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8FE38F8D1DB2B97A00EB9B47 /* GoalItem.swift */,
+				8FE38F8F1DB2BB3200EB9B47 /* DataManager.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		DB858153A3C70EB0E760DCB4 /* Pods */ = {
@@ -312,8 +326,10 @@
 				8F09F52B1DB24AD30028C61D /* GoalsTableViewController.swift in Sources */,
 				8F09F52A1DB24AD30028C61D /* GoalTableViewCell.swift in Sources */,
 				8FE38F881DB2996300EB9B47 /* UserInfoCell.swift in Sources */,
+				8FE38F901DB2BB3200EB9B47 /* DataManager.swift in Sources */,
 				8F09F52E1DB24AD30028C61D /* SettingsViewController.swift in Sources */,
 				8F09F52C1DB24AD30028C61D /* PhotoViewController.swift in Sources */,
+				8FE38F8E1DB2B97A00EB9B47 /* GoalItem.swift in Sources */,
 				8F09F52D1DB24AD30028C61D /* QRViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
