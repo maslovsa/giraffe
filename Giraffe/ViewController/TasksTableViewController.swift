@@ -46,13 +46,39 @@ class TasksTableViewController: UITableViewController {
         return self.tasks.count
     }
     
+//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+//        let task = tasks[indexPath.row]
+//        
+//        if task.type == .Math {
+//            return 100
+//        } else {
+//            return 500
+//        }
+//    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MathCell
-        cell.configure(task: tasks[indexPath.row])
+        let task = tasks[indexPath.row]
         
-        return cell
+        if task.type == .Math {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "MathCell", for: indexPath) as! MathCell
+            cell.configure(task)
+            
+            return cell
+            
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "QRCell", for: indexPath) as! QRCell
+            cell.configure(task)
+            cell.delegate = self
+            return cell
+        }
     }
     
+}
+
+extension TasksTableViewController: QRCellProtocol {
+    func didClickSearch(cell: QRCell) {
+        let controller = MainFabric.getQRViewController()
+        self.present(controller, animated: true, completion: nil)
+    }
 }
 

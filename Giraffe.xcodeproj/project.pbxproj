@@ -34,6 +34,8 @@
 		8FE38F921DB2C1EA00EB9B47 /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F911DB2C1EA00EB9B47 /* TaskItem.swift */; };
 		8FE38F941DB2C71900EB9B47 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F931DB2C71900EB9B47 /* TasksTableViewController.swift */; };
 		8FE38F961DB2CCCF00EB9B47 /* MathCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F951DB2CCCF00EB9B47 /* MathCell.swift */; };
+		8FE38F981DB2DC4700EB9B47 /* BaseTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F971DB2DC4700EB9B47 /* BaseTaskCell.swift */; };
+		8FE38F9A1DB2DD4400EB9B47 /* QRCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F991DB2DD4400EB9B47 /* QRCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		8FE38F911DB2C1EA00EB9B47 /* TaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
 		8FE38F931DB2C71900EB9B47 /* TasksTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		8FE38F951DB2CCCF00EB9B47 /* MathCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathCell.swift; sourceTree = "<group>"; };
+		8FE38F971DB2DC4700EB9B47 /* BaseTaskCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTaskCell.swift; sourceTree = "<group>"; };
+		8FE38F991DB2DD4400EB9B47 /* QRCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCell.swift; sourceTree = "<group>"; };
 		9757B71E694D00165C6461A5 /* Pods-Giraffe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giraffe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Giraffe/Pods-Giraffe.debug.xcconfig"; sourceTree = "<group>"; };
 		A013546D92992A7789B41577 /* Pods-Giraffe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giraffe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Giraffe/Pods-Giraffe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -171,6 +175,8 @@
 			children = (
 				8F09F51F1DB24AD30028C61D /* GoalTableViewCell.swift */,
 				8FE38F951DB2CCCF00EB9B47 /* MathCell.swift */,
+				8FE38F971DB2DC4700EB9B47 /* BaseTaskCell.swift */,
+				8FE38F991DB2DD4400EB9B47 /* QRCell.swift */,
 				8FE38F891DB2A07A00EB9B47 /* TextCell.swift */,
 				8FE38F871DB2996300EB9B47 /* UserInfoCell.swift */,
 			);
@@ -331,12 +337,14 @@
 				8FE38F861DB298DE00EB9B47 /* Constants.swift in Sources */,
 				8F09F5241DB24AD30028C61D /* SWRevealViewController.m in Sources */,
 				8FE38F821DB2844100EB9B47 /* MainFabric.swift in Sources */,
+				8FE38F9A1DB2DD4400EB9B47 /* QRCell.swift in Sources */,
 				8F09F5281DB24AD30028C61D /* MapViewController.swift in Sources */,
 				8FE38F921DB2C1EA00EB9B47 /* TaskItem.swift in Sources */,
 				8FE38F941DB2C71900EB9B47 /* TasksTableViewController.swift in Sources */,
 				8F09F52B1DB24AD30028C61D /* GoalsTableViewController.swift in Sources */,
 				8F09F52A1DB24AD30028C61D /* GoalTableViewCell.swift in Sources */,
 				8FE38F961DB2CCCF00EB9B47 /* MathCell.swift in Sources */,
+				8FE38F981DB2DC4700EB9B47 /* BaseTaskCell.swift in Sources */,
 				8FE38F881DB2996300EB9B47 /* UserInfoCell.swift in Sources */,
 				8FE38F901DB2BB3200EB9B47 /* DataManager.swift in Sources */,
 				8F09F52E1DB24AD30028C61D /* SettingsViewController.swift in Sources */,

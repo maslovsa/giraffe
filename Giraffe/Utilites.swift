@@ -20,8 +20,8 @@ extension UIColor {
         
     }
     
-    class var giraffeDeepColor: UIColor {
-        return UIColor(red: 32/255.0, green: 59/255.0, blue: 104/255.0, alpha: 0.5)
+    class var giraffeGreenColor: UIColor {
+        return UIColor(red: 32/255.0, green: 178/255.0, blue: 102/255.0, alpha: 0.5)
         
     }
 }

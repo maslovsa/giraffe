@@ -347,7 +347,7 @@
         <!--QR-->
         <scene sceneID="SQv-OJ-gYm">
             <objects>
-                <viewController id="tg5-Lw-R2B" customClass="QRViewController" customModule="Giraffe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QRViewController" id="tg5-Lw-R2B" customClass="QRViewController" customModule="Giraffe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0um-i7-id6"/>
                         <viewControllerLayoutGuide type="bottom" id="jf8-B2-S6w"/>
@@ -478,14 +478,14 @@
         <scene sceneID="9Ba-Ik-cYq">
             <objects>
                 <tableViewController id="1os-ET-SNf" customClass="TasksTableViewController" customModule="Giraffe" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="243" sectionHeaderHeight="22" sectionFooterHeight="22" id="yww-rS-vbb">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" id="yww-rS-vbb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95935815570000005" green="0.8257856965" blue="0.63795161249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <color key="sectionIndexBackgroundColor" red="0.95935815570000005" green="0.8257856965" blue="0.63795161249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="frP-55-F3r" customClass="MathCell" customModule="Giraffe" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MathCell" rowHeight="100" id="frP-55-F3r" customClass="MathCell" customModule="Giraffe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="frP-55-F3r" id="j01-dZ-HKz">
@@ -497,46 +497,100 @@
                                             <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2+2 = ?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eID-E3-kqy">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lj-ZI-7Ew">
+                                            <color key="backgroundColor" red="0.9817922711" green="0.48108315470000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="Проверить">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="clickCheck:" destination="frP-55-F3r" eventType="touchUpInside" id="q50-hx-xz8"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2+2 = ?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eID-E3-kqy">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="5Fn-ZC-nsP"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1Y6-tc-UuI">
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wc-ca-2hE">
-                                                    <nil key="textColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8lj-ZI-7Ew">
-                                                    <state key="normal" title="Проверить">
-                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="clickCheck:" destination="frP-55-F3r" eventType="touchUpInside" id="q50-hx-xz8"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </stackView>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Wc-ca-2hE">
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="83" id="WVM-aN-Ytt"/>
+                                            </constraints>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
                                     </subviews>
                                     <color key="backgroundColor" red="0.95935815570000005" green="0.8257856965" blue="0.63795161249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstItem="1Y6-tc-UuI" firstAttribute="centerX" secondItem="j01-dZ-HKz" secondAttribute="centerX" id="2Wi-YJ-khP"/>
+                                        <constraint firstItem="eID-E3-kqy" firstAttribute="leading" secondItem="KhZ-3j-gPG" secondAttribute="leading" id="3Aa-e4-94P"/>
+                                        <constraint firstItem="8lj-ZI-7Ew" firstAttribute="top" secondItem="4Wc-ca-2hE" secondAttribute="bottom" constant="5" id="3Fg-Sg-bx1"/>
                                         <constraint firstItem="eID-E3-kqy" firstAttribute="top" secondItem="KhZ-3j-gPG" secondAttribute="bottom" constant="8" id="AJo-0I-D3w"/>
-                                        <constraint firstItem="eID-E3-kqy" firstAttribute="centerX" secondItem="j01-dZ-HKz" secondAttribute="centerX" id="GVS-0A-o4z"/>
-                                        <constraint firstItem="1Y6-tc-UuI" firstAttribute="top" secondItem="eID-E3-kqy" secondAttribute="bottom" constant="8" id="M3u-uI-Qr9"/>
-                                        <constraint firstItem="1Y6-tc-UuI" firstAttribute="width" secondItem="j01-dZ-HKz" secondAttribute="width" multiplier="0.8" id="qlJ-aw-Hci"/>
+                                        <constraint firstItem="4Wc-ca-2hE" firstAttribute="top" secondItem="KhZ-3j-gPG" secondAttribute="bottom" constant="8" id="Ex0-nh-5kY"/>
+                                        <constraint firstItem="4Wc-ca-2hE" firstAttribute="leading" secondItem="eID-E3-kqy" secondAttribute="trailing" constant="8" id="Lhb-yE-0uE"/>
+                                        <constraint firstItem="8lj-ZI-7Ew" firstAttribute="width" secondItem="KhZ-3j-gPG" secondAttribute="width" id="NOv-gU-gzS"/>
+                                        <constraint firstItem="4Wc-ca-2hE" firstAttribute="trailing" secondItem="KhZ-3j-gPG" secondAttribute="trailing" id="P1P-AM-EMg"/>
+                                        <constraint firstItem="8lj-ZI-7Ew" firstAttribute="centerX" secondItem="j01-dZ-HKz" secondAttribute="centerX" id="mIo-RR-ml0"/>
                                         <constraint firstItem="KhZ-3j-gPG" firstAttribute="centerX" secondItem="j01-dZ-HKz" secondAttribute="centerX" id="rZl-Wq-dCd"/>
                                         <constraint firstItem="KhZ-3j-gPG" firstAttribute="top" secondItem="j01-dZ-HKz" secondAttribute="topMargin" id="sMU-KA-vHN"/>
                                         <constraint firstItem="KhZ-3j-gPG" firstAttribute="width" secondItem="j01-dZ-HKz" secondAttribute="width" multiplier="0.8" id="tI3-Pw-2WC"/>
-                                        <constraint firstItem="eID-E3-kqy" firstAttribute="width" secondItem="j01-dZ-HKz" secondAttribute="width" multiplier="0.8" id="tct-xO-0gj"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="editResult" destination="4Wc-ca-2hE" id="8uf-fM-M2J"/>
                                     <outlet property="excercise" destination="eID-E3-kqy" id="HEY-QV-6d0"/>
                                     <outlet property="titleLabel" destination="KhZ-3j-gPG" id="E6Z-bm-efB"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QRCell" rowHeight="100" id="UFx-uy-eV9" customClass="QRCell" customModule="Giraffe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="186" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UFx-uy-eV9" id="4yP-sm-GVj">
+                                    <frame key="frameInset" width="375" height="99"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbE-dC-f9X">
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MoQ-Nx-I73">
+                                            <color key="backgroundColor" red="0.9817922711" green="0.48108315470000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="Искать">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="clickCheck:" destination="UFx-uy-eV9" eventType="touchUpInside" id="9hO-wU-h58"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Найти что-то" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sL-Ci-C8C">
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="u0H-55-W7L"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.95935815570000005" green="0.8257856965" blue="0.63795161249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="MoQ-Nx-I73" firstAttribute="top" secondItem="9sL-Ci-C8C" secondAttribute="bottom" constant="5" id="4GY-NJ-Bc8"/>
+                                        <constraint firstItem="KbE-dC-f9X" firstAttribute="centerX" secondItem="4yP-sm-GVj" secondAttribute="centerX" id="5N1-PB-DWB"/>
+                                        <constraint firstItem="MoQ-Nx-I73" firstAttribute="width" secondItem="KbE-dC-f9X" secondAttribute="width" id="8uh-Ev-FQU"/>
+                                        <constraint firstItem="KbE-dC-f9X" firstAttribute="width" secondItem="4yP-sm-GVj" secondAttribute="width" multiplier="0.8" id="9Sd-h3-s87"/>
+                                        <constraint firstItem="9sL-Ci-C8C" firstAttribute="top" secondItem="KbE-dC-f9X" secondAttribute="bottom" constant="8" id="Clf-1e-Aqf"/>
+                                        <constraint firstItem="KbE-dC-f9X" firstAttribute="top" secondItem="4yP-sm-GVj" secondAttribute="topMargin" id="LHq-vJ-upx"/>
+                                        <constraint firstItem="9sL-Ci-C8C" firstAttribute="leading" secondItem="KbE-dC-f9X" secondAttribute="leading" id="iFb-0S-Fm1"/>
+                                        <constraint firstItem="9sL-Ci-C8C" firstAttribute="width" secondItem="KbE-dC-f9X" secondAttribute="width" id="pGI-hO-pOS"/>
+                                        <constraint firstItem="9sL-Ci-C8C" firstAttribute="leading" secondItem="KbE-dC-f9X" secondAttribute="leading" id="sZl-wg-CXb"/>
+                                        <constraint firstItem="MoQ-Nx-I73" firstAttribute="centerX" secondItem="4yP-sm-GVj" secondAttribute="centerX" id="yAb-K8-mma"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="excercise" destination="9sL-Ci-C8C" id="QVt-D6-zcD"/>
+                                    <outlet property="titleLabel" destination="KbE-dC-f9X" id="EDu-aX-4JA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

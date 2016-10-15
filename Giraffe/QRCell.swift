@@ -1,19 +1,22 @@
 //
-//  MathCell.swift
+//  QRCell.swift
 //  Giraffe
 //
-//  Created by Maslov Sergey on 15.10.16.
+//  Created by Maslov Sergey on 16.10.16.
 //  Copyright © 2016 ROKO. All rights reserved.
 //
 
 import UIKit
 
-class MathCell: BaseTaskCell {
+protocol QRCellProtocol: class {
+    func didClickSearch(cell: QRCell)
+}
+
+class QRCell: BaseTaskCell {
     
     @IBOutlet weak var titleLabel:UILabel!
     @IBOutlet weak var excercise:UILabel!
-    @IBOutlet weak var editResult: UITextField!
-    
+    weak var delegate: QRCellProtocol?
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -30,14 +33,8 @@ class MathCell: BaseTaskCell {
     
     @IBAction func clickCheck(_ sender: AnyObject) {
         guard let task = task else { return }
-        
-        if let text = editResult.text {
-            if text == task.result {
-                self.task?.isDone = true
-            }
-        }
-        // TODO:
-        updateState()
+        delegate?.didClickSearch(cell: self)
     }
 }
+
 

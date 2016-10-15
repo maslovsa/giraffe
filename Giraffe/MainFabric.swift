@@ -15,4 +15,8 @@ class MainFabric {
         return storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
     }
     
+    class func getQRViewController() -> QRViewController {
+        return storyboard.instantiateViewController(withIdentifier: "QRViewController") as! QRViewController
+    }
+    
 }
