@@ -19,11 +19,11 @@ class UserInfoCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cellLabel.text = labelText
-        if imageName != nil {
-            cellImage.image = UIImage(named: imageName!)
-        }
-        
+//        cellLabel.text = labelText
+//        if imageName != nil {
+//            cellImage.image = UIImage(named: imageName!)
+//        }
+//        
         let view = UIView()
         view.backgroundColor = UIColor.giraffeLightColor
         selectedBackgroundView = view

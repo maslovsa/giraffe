@@ -14,7 +14,7 @@ class TextCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cellLabel.text = labelText
+        //cellLabel.text = labelText
         
         let view = UIView()
         view.backgroundColor = UIColor.giraffeLightColor

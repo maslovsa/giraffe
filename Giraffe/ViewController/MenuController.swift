@@ -28,47 +28,47 @@ class MenuController: UITableViewController {
 
 
     
-    // MARK: - Table view data source
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of rows in the section.
-        return 3
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-        switch indexPath.row {
-        case 0:
-         let cell = UserInfoCell()//tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath) as! UserInfoCell
-            if let userName = UserDefaults.standard.object(forKey: kFacebookUserNameKey) as? String {
-                cell.labelText = userName
-            } else {
-                cell.labelText = "войти"
-            }
-            
-            return cell
-        
-        case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
-            cell.labelText = "Задачи"
-            return cell
-        
-        case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
-            cell.labelText = "WOD"
-            return cell
-            
-        default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
-            return cell
-        }
-        
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //
-    }
-
-
+//    // MARK: - Table view data source
+//
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // Return the number of rows in the section.
+//        return 3
+//    }
+//    
+//    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//
+//        switch indexPath.row {
+//        case 0:
+//         let cell = tableView.dequeueReusableCell(withIdentifier: "UserInfoCell", for: indexPath) as! UserInfoCell
+//            if let userName = UserDefaults.standard.object(forKey: kFacebookUserNameKey) as? String {
+//                cell.cellLabel.text = userName
+//            } else {
+//                cell.labelText = "войти"
+//            }
+//            
+//            return cell
+//        
+//        case 1:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
+//            cell.labelText = "Задачи"
+//            return cell
+//        
+//        case 2:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
+//            cell.labelText = "WOD"
+//            return cell
+//            
+//        default:
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "TextCell", for: indexPath) as! TextCell
+//            return cell
+//        }
+//        
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        //
+//    }
+//
+//
 }

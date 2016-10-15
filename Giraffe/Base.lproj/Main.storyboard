@@ -116,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GYD-T8-RlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="422" y="828"/>
+            <point key="canvasLocation" x="422" y="897"/>
         </scene>
         <!--News-->
         <scene sceneID="3qE-8D-r7Z">
@@ -305,6 +305,7 @@
                                         <color key="backgroundColor" red="0.9817922711" green="0.48108315470000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="cellLabel" destination="PPm-ma-dy5" id="fAR-yi-f5L"/>
+                                            <segue destination="QFS-KZ-aWE" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="l1j-j1-BOk"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -501,6 +502,7 @@
         <image name="vk" width="151" height="141"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Js1-uJ-kt4"/>
         <segue reference="oky-ai-n4s"/>
         <segue reference="fP4-Pi-v9Y"/>
     </inferredMetricsTieBreakers>
