@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Reveal View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="SWRevealViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MainViewController" customModule="Giraffe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -29,7 +29,94 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="51"/>
+            <point key="canvasLocation" x="422" y="155"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="9SY-4R-pdL">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="ESn-rk-GTw" customClass="LoginViewController" customModule="Giraffe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hF6-4M-ILT"/>
+                        <viewControllerLayoutGuide type="bottom" id="kPd-HZ-WeY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2SZ-tI-5sQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="oT0-Ie-ZpE">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjD-i0-iiW">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="Nq9-h0-cgn"/>
+                                            <constraint firstAttribute="width" constant="66" id="dPQ-SN-vys"/>
+                                        </constraints>
+                                        <state key="normal" image="facebook"/>
+                                        <connections>
+                                            <action selector="clickFacebook:" destination="ESn-rk-GTw" eventType="touchUpInside" id="3q8-mZ-0Mu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98P-HR-KXY">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="pW2-wN-fbW"/>
+                                            <constraint firstAttribute="height" constant="66" id="xfk-1A-hu7"/>
+                                        </constraints>
+                                        <state key="normal" image="vk"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYb-rN-S4m">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="8VQ-zu-FJ3"/>
+                                            <constraint firstAttribute="height" constant="66" id="KHg-Ug-9LA"/>
+                                        </constraints>
+                                        <state key="normal" image="ok"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKb-gm-Nfl">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhw-P7-Gwh">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="60B-Ue-Ja8"/>
+                                            <constraint firstAttribute="width" constant="66" id="iz0-0Z-fKu"/>
+                                        </constraints>
+                                        <state key="normal" image="ins"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdb-27-eOG">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="66" id="2Vu-Ad-7cm"/>
+                                            <constraint firstAttribute="height" constant="66" id="cD0-3F-bMj"/>
+                                        </constraints>
+                                        <state key="normal" image="google"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHv-2a-Dsk">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="IiO-QO-lhe"/>
+                                            <constraint firstAttribute="width" constant="66" id="d9Y-eb-oIX"/>
+                                        </constraints>
+                                        <state key="normal" image="github"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LogoForIOS" translatesAutoresizingMaskIntoConstraints="NO" id="5EK-t1-kgZ">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="256" id="4UM-J4-n8q"/>
+                                    <constraint firstAttribute="width" constant="256" id="n77-Ei-gDl"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9817922711" green="0.48108315470000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oT0-Ie-ZpE" firstAttribute="centerX" secondItem="2SZ-tI-5sQ" secondAttribute="centerX" id="0IA-7T-cSq"/>
+                            <constraint firstItem="dKb-gm-Nfl" firstAttribute="top" secondItem="oT0-Ie-ZpE" secondAttribute="bottom" constant="8" id="BUT-De-xiq"/>
+                            <constraint firstItem="5EK-t1-kgZ" firstAttribute="top" secondItem="hF6-4M-ILT" secondAttribute="bottom" constant="60" id="Ef6-uR-geW"/>
+                            <constraint firstItem="dKb-gm-Nfl" firstAttribute="centerX" secondItem="2SZ-tI-5sQ" secondAttribute="centerX" id="XEH-nM-Gia"/>
+                            <constraint firstItem="5EK-t1-kgZ" firstAttribute="centerX" secondItem="2SZ-tI-5sQ" secondAttribute="centerX" id="fLy-n0-zPR"/>
+                            <constraint firstItem="kPd-HZ-WeY" firstAttribute="top" secondItem="dKb-gm-Nfl" secondAttribute="bottom" constant="56" id="qEg-hJ-tHg"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GYD-T8-RlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="422" y="828"/>
         </scene>
         <!--News-->
         <scene sceneID="3qE-8D-r7Z">
@@ -132,7 +219,7 @@
                         <sections>
                             <tableViewSection id="uba-LA-EjJ">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="user_cell" rowHeight="133" id="g9Q-QW-DeP" customClass="MainMenuCell" customModule="Giraffe" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="user_cell" rowHeight="133" id="g9Q-QW-DeP" customClass="UserInfoCell" customModule="Giraffe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="133"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g9Q-QW-DeP" id="mav-NV-Wjh">
@@ -285,7 +372,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </mapView>
             </objects>
-            <point key="canvasLocation" x="-239.19999999999999" y="-687.7061469265368"/>
+            <point key="canvasLocation" x="422" y="-687"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="a23-LC-1XJ">
@@ -333,8 +420,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qr_code" translatesAutoresizingMaskIntoConstraints="NO" id="qZB-vh-Eaj"/>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="No QR Code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91e-o0-JyW">
-                                <frame key="frameInset" minY="619" width="359" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No QR Code is detected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="91e-o0-JyW">
                                 <color key="backgroundColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="DZU-kt-bdT"/>
@@ -453,9 +539,16 @@
         </scene>
     </scenes>
     <resources>
+        <image name="LogoForIOS" width="228" height="161"/>
+        <image name="facebook" width="151" height="141"/>
+        <image name="github" width="151" height="141"/>
+        <image name="google" width="151" height="141"/>
+        <image name="ins" width="151" height="141"/>
         <image name="menu" width="22" height="22"/>
+        <image name="ok" width="151" height="141"/>
         <image name="qr_code" width="1024" height="1024"/>
         <image name="san" width="83" height="89"/>
+        <image name="vk" width="151" height="141"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="oky-ai-n4s"/>

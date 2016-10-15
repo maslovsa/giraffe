@@ -8,21 +8,45 @@
 
 import UIKit
 import FacebookLogin
-
+import FacebookCore
+import FBSDKCoreKit
 
 class SettingsViewController: BaseRevealViewController {
-    //@IBOutlet weak var loginButton: FBSDKButton!
+    
     @IBOutlet weak var userImage: UIImageView!
     
     @IBOutlet weak var userName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         let loginButton = LoginButton(readPermissions: [ .publicProfile ])
         loginButton.center = view.center
-        
+        loginButton.delegate = self
         view.addSubview(loginButton)
+        
+        
+        if let _ = AccessToken.current {
+            updateUserInfo()
+        }
+    }
+    
+    func updateUserInfo() {
+        let pictureRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "id, name, gender, first_name, last_name, locale, email"])
+        pictureRequest?.start(completionHandler: {
+            _, result, error in
+            if error == nil {
+                print("\(result)")
+                if let params = result as? [String:String] {
+                    if let userName = params["name"] {
+                        self.userName.text = userName
+                        print("User Name is: \(userName)")
+                        UserDefaults.standard.set(userName, forKey: kFacebookUserNameKey)
+                    }
+                }
+            } else {
+                print("\(error)")
+            }
+        })
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,4 +55,15 @@ class SettingsViewController: BaseRevealViewController {
     }
     
     
+}
+
+extension SettingsViewController: LoginButtonDelegate {
+    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
+        updateUserInfo()
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: LoginButton) {
+        userImage.image = UIImage(named: "san")
+        userName.text = "Please Login"
+    }
 }

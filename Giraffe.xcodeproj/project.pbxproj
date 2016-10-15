@@ -11,7 +11,7 @@
 		8F09F4FE1DB210A60028C61D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F09F4FD1DB210A60028C61D /* MapKit.framework */; };
 		8F09F5241DB24AD30028C61D /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5171DB24AD30028C61D /* SWRevealViewController.m */; };
 		8F09F5251DB24AD30028C61D /* BaseRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5191DB24AD30028C61D /* BaseRevealViewController.swift */; };
-		8F09F5261DB24AD30028C61D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F51A1DB24AD30028C61D /* ViewController.swift */; };
+		8F09F5261DB24AD30028C61D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F51A1DB24AD30028C61D /* MainViewController.swift */; };
 		8F09F5271DB24AD30028C61D /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F51B1DB24AD30028C61D /* Utilites.swift */; };
 		8F09F5281DB24AD30028C61D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F51D1DB24AD30028C61D /* MapViewController.swift */; };
 		8F09F5291DB24AD30028C61D /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F51E1DB24AD30028C61D /* MenuController.swift */; };
@@ -25,6 +25,10 @@
 		8FCA1A371DB1A3AB000DC195 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1A361DB1A3AB000DC195 /* Assets.xcassets */; };
 		8FCA1A3A1DB1A3AB000DC195 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FCA1A381DB1A3AB000DC195 /* LaunchScreen.storyboard */; };
 		8FE38F7E1DB2768F00EB9B47 /* MainMenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F7D1DB2768F00EB9B47 /* MainMenuCell.swift */; };
+		8FE38F801DB2830E00EB9B47 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F7F1DB2830E00EB9B47 /* LoginViewController.swift */; };
+		8FE38F821DB2844100EB9B47 /* MainFabric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F811DB2844100EB9B47 /* MainFabric.swift */; };
+		8FE38F861DB298DE00EB9B47 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F851DB298DE00EB9B47 /* Constants.swift */; };
+		8FE38F881DB2996300EB9B47 /* UserInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE38F871DB2996300EB9B47 /* UserInfoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +37,7 @@
 		8F09F5161DB24AD30028C61D /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		8F09F5171DB24AD30028C61D /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		8F09F5191DB24AD30028C61D /* BaseRevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRevealViewController.swift; sourceTree = "<group>"; };
-		8F09F51A1DB24AD30028C61D /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8F09F51A1DB24AD30028C61D /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8F09F51B1DB24AD30028C61D /* Utilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		8F09F51D1DB24AD30028C61D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8F09F51E1DB24AD30028C61D /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ../ViewController/MenuController.swift; sourceTree = "<group>"; };
@@ -50,6 +54,10 @@
 		8FCA1A3B1DB1A3AB000DC195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FCA1A411DB1A3D0000DC195 /* Giraffe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Giraffe-Bridging-Header.h"; sourceTree = "<group>"; };
 		8FE38F7D1DB2768F00EB9B47 /* MainMenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuCell.swift; sourceTree = "<group>"; };
+		8FE38F7F1DB2830E00EB9B47 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8FE38F811DB2844100EB9B47 /* MainFabric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFabric.swift; sourceTree = "<group>"; };
+		8FE38F851DB298DE00EB9B47 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8FE38F871DB2996300EB9B47 /* UserInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfoCell.swift; sourceTree = "<group>"; };
 		9757B71E694D00165C6461A5 /* Pods-Giraffe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giraffe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Giraffe/Pods-Giraffe.debug.xcconfig"; sourceTree = "<group>"; };
 		A013546D92992A7789B41577 /* Pods-Giraffe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Giraffe.release.xcconfig"; path = "Pods/Target Support Files/Pods-Giraffe/Pods-Giraffe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,7 +98,7 @@
 			children = (
 				8F09F5191DB24AD30028C61D /* BaseRevealViewController.swift */,
 				8F09F51E1DB24AD30028C61D /* MenuController.swift */,
-				8F09F51A1DB24AD30028C61D /* ViewController.swift */,
+				8F09F51A1DB24AD30028C61D /* MainViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -100,6 +108,7 @@
 			children = (
 				8F09F51D1DB24AD30028C61D /* MapViewController.swift */,
 				8F09F5201DB24AD30028C61D /* NewsTableViewController.swift */,
+				8FE38F7F1DB2830E00EB9B47 /* LoginViewController.swift */,
 				8F09F5211DB24AD30028C61D /* PhotoViewController.swift */,
 				8F09F5221DB24AD30028C61D /* QRViewController.swift */,
 				8F09F5231DB24AD30028C61D /* SettingsViewController.swift */,
@@ -135,6 +144,8 @@
 				8F09F5181DB24AD30028C61D /* Base */,
 				8F09F51C1DB24AD30028C61D /* ViewController */,
 				8F09F51B1DB24AD30028C61D /* Utilites.swift */,
+				8FE38F811DB2844100EB9B47 /* MainFabric.swift */,
+				8FE38F851DB298DE00EB9B47 /* Constants.swift */,
 				8FCA1A361DB1A3AB000DC195 /* Assets.xcassets */,
 				8FCA1A331DB1A3AB000DC195 /* Main.storyboard */,
 				8FCA1A381DB1A3AB000DC195 /* LaunchScreen.storyboard */,
@@ -148,6 +159,7 @@
 			children = (
 				8F09F51F1DB24AD30028C61D /* NewsTableViewCell.swift */,
 				8FE38F7D1DB2768F00EB9B47 /* MainMenuCell.swift */,
+				8FE38F871DB2996300EB9B47 /* UserInfoCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -286,16 +298,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FE38F801DB2830E00EB9B47 /* LoginViewController.swift in Sources */,
 				8F09F5291DB24AD30028C61D /* MenuController.swift in Sources */,
 				8FE38F7E1DB2768F00EB9B47 /* MainMenuCell.swift in Sources */,
-				8F09F5261DB24AD30028C61D /* ViewController.swift in Sources */,
+				8F09F5261DB24AD30028C61D /* MainViewController.swift in Sources */,
 				8FCA1A301DB1A3AB000DC195 /* AppDelegate.swift in Sources */,
 				8F09F5251DB24AD30028C61D /* BaseRevealViewController.swift in Sources */,
 				8F09F5271DB24AD30028C61D /* Utilites.swift in Sources */,
+				8FE38F861DB298DE00EB9B47 /* Constants.swift in Sources */,
 				8F09F5241DB24AD30028C61D /* SWRevealViewController.m in Sources */,
+				8FE38F821DB2844100EB9B47 /* MainFabric.swift in Sources */,
 				8F09F5281DB24AD30028C61D /* MapViewController.swift in Sources */,
 				8F09F52B1DB24AD30028C61D /* NewsTableViewController.swift in Sources */,
 				8F09F52A1DB24AD30028C61D /* NewsTableViewCell.swift in Sources */,
+				8FE38F881DB2996300EB9B47 /* UserInfoCell.swift in Sources */,
 				8F09F52E1DB24AD30028C61D /* SettingsViewController.swift in Sources */,
 				8F09F52C1DB24AD30028C61D /* PhotoViewController.swift in Sources */,
 				8F09F52D1DB24AD30028C61D /* QRViewController.swift in Sources */,

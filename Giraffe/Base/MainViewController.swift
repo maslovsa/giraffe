@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import FacebookCore
 
-class ViewController: UIViewController {
+class MainViewController: SWRevealViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        if let accessToken = AccessToken.current {
+            // User is logged in, use 'accessToken' here.
+        } else {
+            let controller = MainFabric.getLandingViewController()
+            self.present(controller, animated: true, completion: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {
