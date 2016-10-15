@@ -48,13 +48,8 @@ class TasksTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! GoalTableViewCell
-        
-        let task = tasks[indexPath.row]
-        
-        cell.goalImageView.image = UIImage(named: "news")
-        cell.titleLabel.text = task.title
-        cell.progressLabel.text = task.result
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MathCell
+        cell.configure(task: tasks[indexPath.row])
         
         return cell
     }

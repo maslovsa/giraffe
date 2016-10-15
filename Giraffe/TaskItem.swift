@@ -19,7 +19,7 @@ struct TaskItem {
     var type = TaskType.Math
     var exercise : String
     var result : String
-    var idDone = false
+    var isDone = false
     
     init(id: String, title: String, type : TaskType, exercise: String, result: String) {
         self.id = id
