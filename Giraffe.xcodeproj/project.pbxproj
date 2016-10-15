@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8F09F4FE1DB210A60028C61D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F09F4FD1DB210A60028C61D /* MapKit.framework */; };
 		8F09F5041DB210B50028C61D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F4FF1DB210B50028C61D /* MapViewController.swift */; };
-		8F09F5051DB210B50028C61D /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5001DB210B50028C61D /* MenuController.swift */; };
 		8F09F5061DB210B50028C61D /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5011DB210B50028C61D /* NewsTableViewCell.swift */; };
 		8F09F5071DB210B50028C61D /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5021DB210B50028C61D /* NewsTableViewController.swift */; };
 		8F09F5081DB210B50028C61D /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5031DB210B50028C61D /* PhotoViewController.swift */; };
@@ -25,7 +24,6 @@
 /* Begin PBXFileReference section */
 		8F09F4FD1DB210A60028C61D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		8F09F4FF1DB210B50028C61D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = SOURCE_ROOT; };
-		8F09F5001DB210B50028C61D /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = SOURCE_ROOT; };
 		8F09F5011DB210B50028C61D /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		8F09F5021DB210B50028C61D /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 		8F09F5031DB210B50028C61D /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -65,7 +63,6 @@
 		8F09F5091DB217CB0028C61D /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8F09F5001DB210B50028C61D /* MenuController.swift */,
 				8F09F5011DB210B50028C61D /* NewsTableViewCell.swift */,
 				8F09F5021DB210B50028C61D /* NewsTableViewController.swift */,
 				8F09F5031DB210B50028C61D /* PhotoViewController.swift */,
@@ -192,7 +189,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F09F5051DB210B50028C61D /* MenuController.swift in Sources */,
 				8FCA1A321DB1A3AB000DC195 /* ViewController.swift in Sources */,
 				8F09F5061DB210B50028C61D /* NewsTableViewCell.swift in Sources */,
 				8FCA1A301DB1A3AB000DC195 /* AppDelegate.swift in Sources */,
