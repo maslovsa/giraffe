@@ -5,7 +5,7 @@ use_frameworks!
 
 target 'Giraffe' do
 
-pod 'Alamofire', '~> 4.0'
+# pod 'Alamofire', '~> 4.0'
 pod 'SDWebImage'
 pod 'FacebookCore'
 pod 'FacebookLogin'

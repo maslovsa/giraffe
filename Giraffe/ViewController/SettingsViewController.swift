@@ -31,7 +31,7 @@ class SettingsViewController: BaseRevealViewController {
     }
     
     func updateUserInfo() {
-        let pictureRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "id, name, gender, first_name, last_name, locale, email"])
+        let pictureRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "id, name, gender, first_name, last_name, locale"])
         pictureRequest?.start(completionHandler: {
             _, result, error in
             if error == nil {
