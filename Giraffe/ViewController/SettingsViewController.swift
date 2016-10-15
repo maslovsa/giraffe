@@ -37,7 +37,7 @@ class SettingsViewController: BaseRevealViewController {
             if error == nil {
                 print("\(result)")
                 if let params = result as? [String:String] {
-                    if let userName = params["name"] {
+                    if let userName = params["first_name"] {
                         self.userName.text = userName
                         print("User Name is: \(userName)")
                         UserDefaults.standard.set(userName, forKey: kFacebookUserNameKey)

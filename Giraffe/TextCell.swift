@@ -1,30 +1,24 @@
 //
-//  MainMenuCell.swift
+//  TextCell.swift
 //  Giraffe
 //
 //  Created by Maslov Sergey on 15.10.16.
 //  Copyright © 2016 ROKO. All rights reserved.
 //
 
-import UIKit
-
-class MainMenuCell: UITableViewCell {
-
-    @IBOutlet weak var cellImage: UIImageView!
+class TextCell: UITableViewCell {
+    
     @IBOutlet weak var cellLabel: UILabel!
-    
-    
+    var labelText: String = ""
+
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        cellLabel.text = labelText
         
         let view = UIView()
         view.backgroundColor = UIColor.giraffeLightColor
         selectedBackgroundView = view
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
 }
-

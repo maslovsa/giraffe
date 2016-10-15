@@ -8,17 +8,25 @@
 import UIKit
 
 
-class UserInfoCell: MainMenuCell {
+class UserInfoCell: UITableViewCell {
     
+    @IBOutlet weak var cellImage: UIImageView!
+    @IBOutlet weak var cellLabel: UILabel!
+    
+    var labelText: String = ""
+    var imageName: String? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        if let userName = UserDefaults.standard.object(forKey: kFacebookUserNameKey) as? String {
-            cellLabel.text = userName
-        } else {
-            cellLabel.text = "Войти"
+        cellLabel.text = labelText
+        if imageName != nil {
+            cellImage.image = UIImage(named: imageName!)
         }
+        
+        let view = UIView()
+        view.backgroundColor = UIColor.giraffeLightColor
+        selectedBackgroundView = view
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -26,4 +34,3 @@ class UserInfoCell: MainMenuCell {
     }
     
 }
-
