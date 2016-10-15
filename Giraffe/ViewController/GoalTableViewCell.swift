@@ -8,12 +8,11 @@
 
 import UIKit
 
-class NewsTableViewCell: UITableViewCell {
+class GoalTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var postImageView:UIImageView!
-    @IBOutlet weak var authorImageView:UIImageView!
-    @IBOutlet weak var postTitleLabel:UILabel!
-    @IBOutlet weak var authorLabel:UILabel!
+    @IBOutlet weak var goalImageView:UIImageView!
+    @IBOutlet weak var titleLabel:UILabel!
+    @IBOutlet weak var progressLabel:UILabel!
 
     
     override func awakeFromNib() {

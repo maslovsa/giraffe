@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewsTableViewController: UITableViewController {
+class GoalsTableViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
 
     override func viewDidLoad() {
@@ -46,19 +46,18 @@ class NewsTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! NewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! GoalTableViewCell
 
         // Configure the cell...
         if (indexPath as NSIndexPath).row == 0 {
-            cell.postImageView.image = UIImage(named: "news")
-            cell.postTitleLabel.text = "Супер газета"
-            cell.authorLabel.text = "5 из 20"
+            cell.goalImageView.image = UIImage(named: "news")
+            cell.titleLabel.text = "Супер газета"
+            cell.progressLabel.text = "5 из 20"
         } else {
-            cell.postImageView.image = UIImage(named: "map")
-            cell.postTitleLabel.text = "Супер путешествие"
-            cell.authorLabel.text = "10 из 20"
+            cell.goalImageView.image = UIImage(named: "map")
+            cell.titleLabel.text = "Супер путешествие"
+            cell.progressLabel.text = "10 из 20"
         }
-
         return cell
     }
     

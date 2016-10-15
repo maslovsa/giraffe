@@ -15,8 +15,8 @@
 		8F09F5271DB24AD30028C61D /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F51B1DB24AD30028C61D /* Utilites.swift */; };
 		8F09F5281DB24AD30028C61D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F51D1DB24AD30028C61D /* MapViewController.swift */; };
 		8F09F5291DB24AD30028C61D /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F51E1DB24AD30028C61D /* MenuController.swift */; };
-		8F09F52A1DB24AD30028C61D /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F51F1DB24AD30028C61D /* NewsTableViewCell.swift */; };
-		8F09F52B1DB24AD30028C61D /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5201DB24AD30028C61D /* NewsTableViewController.swift */; };
+		8F09F52A1DB24AD30028C61D /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F51F1DB24AD30028C61D /* GoalTableViewCell.swift */; };
+		8F09F52B1DB24AD30028C61D /* GoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5201DB24AD30028C61D /* GoalsTableViewController.swift */; };
 		8F09F52C1DB24AD30028C61D /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5211DB24AD30028C61D /* PhotoViewController.swift */; };
 		8F09F52D1DB24AD30028C61D /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5221DB24AD30028C61D /* QRViewController.swift */; };
 		8F09F52E1DB24AD30028C61D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F09F5231DB24AD30028C61D /* SettingsViewController.swift */; };
@@ -41,8 +41,8 @@
 		8F09F51B1DB24AD30028C61D /* Utilites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		8F09F51D1DB24AD30028C61D /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		8F09F51E1DB24AD30028C61D /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuController.swift; path = ../ViewController/MenuController.swift; sourceTree = "<group>"; };
-		8F09F51F1DB24AD30028C61D /* NewsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewsTableViewCell.swift; path = ViewController/NewsTableViewCell.swift; sourceTree = "<group>"; };
-		8F09F5201DB24AD30028C61D /* NewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
+		8F09F51F1DB24AD30028C61D /* GoalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoalTableViewCell.swift; path = ViewController/GoalTableViewCell.swift; sourceTree = "<group>"; };
+		8F09F5201DB24AD30028C61D /* GoalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsTableViewController.swift; sourceTree = "<group>"; };
 		8F09F5211DB24AD30028C61D /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		8F09F5221DB24AD30028C61D /* QRViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		8F09F5231DB24AD30028C61D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				8F09F51D1DB24AD30028C61D /* MapViewController.swift */,
-				8F09F5201DB24AD30028C61D /* NewsTableViewController.swift */,
+				8F09F5201DB24AD30028C61D /* GoalsTableViewController.swift */,
 				8FE38F7F1DB2830E00EB9B47 /* LoginViewController.swift */,
 				8F09F5211DB24AD30028C61D /* PhotoViewController.swift */,
 				8F09F5221DB24AD30028C61D /* QRViewController.swift */,
@@ -157,7 +157,7 @@
 		8FE38F7C1DB2765500EB9B47 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8F09F51F1DB24AD30028C61D /* NewsTableViewCell.swift */,
+				8F09F51F1DB24AD30028C61D /* GoalTableViewCell.swift */,
 				8FE38F891DB2A07A00EB9B47 /* TextCell.swift */,
 				8FE38F871DB2996300EB9B47 /* UserInfoCell.swift */,
 			);
@@ -309,8 +309,8 @@
 				8F09F5241DB24AD30028C61D /* SWRevealViewController.m in Sources */,
 				8FE38F821DB2844100EB9B47 /* MainFabric.swift in Sources */,
 				8F09F5281DB24AD30028C61D /* MapViewController.swift in Sources */,
-				8F09F52B1DB24AD30028C61D /* NewsTableViewController.swift in Sources */,
-				8F09F52A1DB24AD30028C61D /* NewsTableViewCell.swift in Sources */,
+				8F09F52B1DB24AD30028C61D /* GoalsTableViewController.swift in Sources */,
+				8F09F52A1DB24AD30028C61D /* GoalTableViewCell.swift in Sources */,
 				8FE38F881DB2996300EB9B47 /* UserInfoCell.swift in Sources */,
 				8F09F52E1DB24AD30028C61D /* SettingsViewController.swift in Sources */,
 				8F09F52C1DB24AD30028C61D /* PhotoViewController.swift in Sources */,

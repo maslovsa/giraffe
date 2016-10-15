@@ -121,14 +121,14 @@
         <!--Мои цели-->
         <scene sceneID="3qE-8D-r7Z">
             <objects>
-                <tableViewController id="RaP-X2-i0v" customClass="NewsTableViewController" customModule="Giraffe" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="RaP-X2-i0v" customClass="GoalsTableViewController" customModule="Giraffe" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="243" sectionHeaderHeight="22" sectionFooterHeight="22" id="Idv-M6-Zjl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.95935815570000005" green="0.8257856965" blue="0.63795161249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.95935815570000005" green="0.8257856965" blue="0.63795161249999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="m7N-Q8-5h6" customClass="NewsTableViewCell" customModule="Giraffe" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="200" id="m7N-Q8-5h6" customClass="GoalTableViewCell" customModule="Giraffe" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="86" width="375" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="m7N-Q8-5h6" id="uxv-3b-FYp">
@@ -169,9 +169,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="authorLabel" destination="OKZ-BL-0Ch" id="CFc-0m-O28"/>
-                                    <outlet property="postImageView" destination="0fY-zV-g8m" id="KgN-8d-pQr"/>
-                                    <outlet property="postTitleLabel" destination="gWv-wQ-DZa" id="PHA-RC-Ohz"/>
+                                    <outlet property="goalImageView" destination="0fY-zV-g8m" id="t3F-OD-91w"/>
+                                    <outlet property="progressLabel" destination="OKZ-BL-0Ch" id="aTi-ee-xeI"/>
+                                    <outlet property="titleLabel" destination="gWv-wQ-DZa" id="pio-k0-j74"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
