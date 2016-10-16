@@ -19,4 +19,10 @@ class MainFabric {
         return storyboard.instantiateViewController(withIdentifier: "QRViewController") as! QRViewController
     }
     
+    
+    class func getGoalsTableViewController() -> GoalsTableViewController {
+        return storyboard.instantiateViewController(withIdentifier: "GoalsTableViewController") as! GoalsTableViewController
+    }
+    
+    
 }

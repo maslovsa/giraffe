@@ -28,6 +28,9 @@ class TasksTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,6 +44,19 @@ class TasksTableViewController: UITableViewController {
             if let inputView = view as? UITextField {
                 inputView.resignFirstResponder()
             }
+        }
+    }
+    
+    func checkTasks() {
+        if tasks.filter({ $0.isDone}).count == tasks.count {
+            let alert = UIAlertController(title: "Поздравляем", message: "Выполнено задание", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ура!", style: .default, handler: { (action) in
+                let controller = MainFabric.getGoalsTableViewController()
+                let navigationVC = UINavigationController(rootViewController: controller)
+                navigationVC.setViewControllers([controller], animated: true)
+                self.revealViewController().pushFrontViewController(navigationVC, animated: true)
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
@@ -91,6 +107,7 @@ class TasksTableViewController: UITableViewController {
 }
 
 extension TasksTableViewController: BaseCellProtocol {
+    
     func didClickSearch(cell: BaseTaskCell) {
         let controller = MainFabric.getQRViewController()
         self.taskForQR = cell.task
