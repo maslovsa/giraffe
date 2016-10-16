@@ -1,4 +1,4 @@
-Project for [Hackaton](http://penza.hackday.ru/) #hackday43
+# Project for [Hackaton](http://penza.hackday.ru/) #hackday43
 
 I used:
 
@@ -13,4 +13,9 @@ I used:
 5. Native Camera QR scaning
 
 6. SWRevealViewController for Navigation
+
+
+
+![Our team](https://pp.vk.me/c626123/v626123292/2da9f/ecmJCv37I1U.jpg)
+
 
