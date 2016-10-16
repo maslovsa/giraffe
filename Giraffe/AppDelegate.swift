@@ -9,16 +9,27 @@
 import UIKit
 import FacebookCore
 import FBSDKCoreKit
+import UserNotifications
+import UserNotificationsUI
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    let requestIdentifier = "SampleRequest"
     var window: UIWindow?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        
+        
+        //request authorization
+        let center = UNUserNotificationCenter.current()
+        let options : UNAuthorizationOptions = [.alert, .badge, .sound]
+        center.requestAuthorization(options: options) { (granted, error) in
+            // Enable or disable features based on authorization.
+        }
         return true
     }
     
@@ -47,6 +58,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Новое задание от Папы"
+        content.subtitle = "Поиск QR кода"
+        content.body = "Уберись в комнате, разбери вещи"
+        content.sound = UNNotificationSound.default()
+        
+        // Deliver the notification in five seconds.
+        
+        let trigger = UNTimeIntervalNotificationTrigger.init(timeInterval: 20.0, repeats: false)
+        let request = UNNotificationRequest(identifier:requestIdentifier, content: content, trigger: trigger)
+        
+        UNUserNotificationCenter.current().delegate = self
+        UNUserNotificationCenter.current().add(request){(error) in
+            
+            if (error != nil){
+                
+                //handle here
+                
+            }
+            
+        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -61,3 +95,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate{
+    
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: () -> Void) {
+        
+        print("Tapped in notification")
+        
+    }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: (UNNotificationPresentationOptions) -> Void) {
+        
+        print("Notification being triggered")
+        //You can either present alert ,sound or increase badge while the app is in foreground too with ios 10
+        //to distinguish between notifications
+        if notification.request.identifier == requestIdentifier{
+            
+            completionHandler( [.alert,.sound])
+            
+            
+            
+        }
+        
+    }
+    
+}

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -137,9 +138,9 @@
                                     <frame key="frameInset" width="375" height="179"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ipad" translatesAutoresizingMaskIntoConstraints="NO" id="0fY-zV-g8m">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ipad" translatesAutoresizingMaskIntoConstraints="NO" id="0fY-zV-g8m">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="130" id="GQa-xI-zM8"/>
+                                                <constraint firstAttribute="width" constant="200" id="GQa-xI-zM8"/>
                                                 <constraint firstAttribute="height" constant="130" id="hNb-xf-Bom"/>
                                             </constraints>
                                         </imageView>
@@ -163,7 +164,7 @@
                                         <constraint firstItem="gWv-wQ-DZa" firstAttribute="width" secondItem="uxv-3b-FYp" secondAttribute="width" id="diR-1J-pYx"/>
                                         <constraint firstItem="0fY-zV-g8m" firstAttribute="centerX" secondItem="uxv-3b-FYp" secondAttribute="centerX" id="fXf-HS-BX8"/>
                                         <constraint firstItem="OKZ-BL-0Ch" firstAttribute="top" secondItem="gWv-wQ-DZa" secondAttribute="bottom" id="tB6-Q4-ct0"/>
-                                        <constraint firstItem="gWv-wQ-DZa" firstAttribute="top" secondItem="0fY-zV-g8m" secondAttribute="bottom" id="zHp-nn-bKd"/>
+                                        <constraint firstItem="gWv-wQ-DZa" firstAttribute="top" secondItem="0fY-zV-g8m" secondAttribute="bottom" constant="5" id="zHp-nn-bKd"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -544,7 +545,7 @@
                                 <rect key="frame" x="0.0" y="86" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="center" tableViewCell="frP-55-F3r" id="j01-dZ-HKz">
-                                    <frame key="frameInset" width="375" height="99"/>
+                                    <frame key="frameInset" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Математика" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhZ-3j-gPG">
@@ -603,7 +604,7 @@
                                 <rect key="frame" x="0.0" y="186" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UFx-uy-eV9" id="4yP-sm-GVj">
-                                    <frame key="frameInset" width="375" height="99"/>
+                                    <frame key="frameInset" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поиск" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbE-dC-f9X">
@@ -675,7 +676,7 @@
         <image name="github" width="151" height="141"/>
         <image name="google" width="151" height="141"/>
         <image name="ins" width="151" height="141"/>
-        <image name="ipad" width="218" height="231"/>
+        <image name="ipad" width="400" height="225"/>
         <image name="menu" width="22" height="22"/>
         <image name="ok" width="151" height="141"/>
         <image name="qr_code" width="1024" height="1024"/>

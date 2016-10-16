@@ -39,7 +39,6 @@ class TasksTableViewController: UITableViewController {
     }
     
     func dismissKeyboard() {
-        print("dismiss keyboard")
         for view in self.view.subviews {
             if let inputView = view as? UITextField {
                 inputView.resignFirstResponder()
@@ -70,7 +69,7 @@ class TasksTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let task = tasks[indexPath.row]
         
-        return task.isDone ? 60.0 : 100.0
+        return task.isDone ? 59.0 : 100.0
     }
     
     

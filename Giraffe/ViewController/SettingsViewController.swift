@@ -26,7 +26,10 @@ class SettingsViewController: BaseRevealViewController {
         
         
         if let _ = AccessToken.current {
-            updateUserInfo()
+            if let userName = UserDefaults.standard.object(forKey: kFacebookUserNameKey) as? String {
+               self.userName.text = userName
+            }
+            //updateUserInfo()
         }
         
         self.view.backgroundColor = UIColor.giraffeDarkColor
@@ -70,7 +73,6 @@ extension SettingsViewController: LoginButtonDelegate {
     }
     
     func loginButtonDidLogOut(_ loginButton: LoginButton) {
-        userImage.image = UIImage(named: "san")
-        userName.text = "Please Login"
+        userName.text = "Hello"
     }
 }
