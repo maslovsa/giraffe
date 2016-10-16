@@ -28,6 +28,8 @@ class SettingsViewController: BaseRevealViewController {
         if let _ = AccessToken.current {
             updateUserInfo()
         }
+        
+        self.view.backgroundColor = UIColor.giraffeDarkColor
     }
     
     func updateUserInfo() {

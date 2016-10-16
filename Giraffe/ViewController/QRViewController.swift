@@ -118,6 +118,7 @@ class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
                 delegate?.didFound(result: metadataObj.stringValue)
+                self.navigationController?.popViewController(animated: true)
             }
         }
     }

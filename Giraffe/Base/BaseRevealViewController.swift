@@ -19,8 +19,9 @@ class BaseRevealViewController: UIViewController {
             menuButton.target = self.revealViewController()
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.revealViewController().rearViewRevealWidth = self.view.frame.width-100
+            
         }
-        
-        self.view.backgroundColor = UIColor.giraffeLightColor
+
     }
 }

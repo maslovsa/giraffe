@@ -40,13 +40,13 @@ class BaseTaskCell: UITableViewCell {
     }
     
     func notifyBadAnswer(){
-        self.contentView.backgroundColor = UIColor.giraffeLightColor
+        self.contentView.backgroundColor = UIColor.white
             
         UIView.animate(withDuration: 0.7, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
             self.contentView.backgroundColor = UIColor.red
             }, completion: { (Bool) -> () in
                 UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
-                    self.contentView.backgroundColor = UIColor.giraffeLightColor
+                    self.contentView.backgroundColor = UIColor.white
                     }, completion: nil)
         })
     }

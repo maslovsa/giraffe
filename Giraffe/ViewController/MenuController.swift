@@ -16,6 +16,7 @@ class MenuController: UITableViewController {
         self.clearsSelectionOnViewWillAppear = false
         self.view.backgroundColor = UIColor.giraffeDarkColor
         
+//        self.view.bounds.width = 200.0
         self.tableView.register(UserInfoCell.self, forCellReuseIdentifier: "UserInfoCell")
         self.tableView.register(TextCell.self, forCellReuseIdentifier: "TextCell")
 

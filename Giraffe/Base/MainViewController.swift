@@ -13,13 +13,7 @@ class MainViewController: SWRevealViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if let accessToken = AccessToken.current {
-//            // User is logged in, use 'accessToken' here.
-//        } else {
-//            let controller = MainFabric.getLandingViewController()
-//            self.present(controller, animated: true, completion: nil)
-//        }
-    }
+            }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

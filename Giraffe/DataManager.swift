@@ -24,9 +24,10 @@ class DataManager {
     
     func getGoals(completion: ([GoalItem]) -> Void) {
         
-        let goalA = GoalItem(id: "0", title: "Супер газета", image : "news", current: 3, total: 10)
-        let goalB = GoalItem(id: "1", title: "Супер путешествие", image : "map", current: 10, total: 20)
-        goals = [goalA, goalB]
+        let goalA = GoalItem(id: "0", title: "ipad Air", image : "ipad", current: 3, total: 10)
+        let goalB = GoalItem(id: "1", title: "Супер путешествие - Disney Land", image : "disney", current: 10, total: 20)
+        let goalC = GoalItem(id: "2", title: "Гордый велосипед", image : "bike", current: 20, total: 30)
+        goals = [goalA, goalC, goalB]
         
         completion(goals)
 

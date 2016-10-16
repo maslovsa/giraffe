@@ -30,7 +30,7 @@ class QRCell: BaseTaskCell {
     }
     
     @IBAction func clickCheck(_ sender: AnyObject) {
-        guard let task = task else { return }
+        guard let _ = task else { return }
         delegate?.didClickSearch(cell: self)
     }
 }

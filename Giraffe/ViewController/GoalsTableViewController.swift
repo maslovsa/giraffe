@@ -28,6 +28,8 @@ class GoalsTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
+        
+        self.view.backgroundColor = UIColor.white
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,6 +67,11 @@ class GoalsTableViewController: UITableViewController {
         cell.titleLabel.text = goal.title
         cell.progressLabel.text = "\(goal.current) из \(goal.total)"
 
+        
+//        DispatchQueue.main.async {
+//            cell.goalImageView.layer.cornerRadius = 65
+//            cell.goalImageView.clipsToBounds = true
+//        }
         return cell
     }
     
