@@ -28,9 +28,9 @@ class TasksTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-        
-        
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
     }
     
     override func didReceiveMemoryWarning() {
@@ -49,15 +49,20 @@ class TasksTableViewController: UITableViewController {
     
     func checkTasks() {
         if tasks.filter({ $0.isDone}).count == tasks.count {
-            let alert = UIAlertController(title: "Поздравляем", message: "Выполнено задание", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ура!", style: .default, handler: { (action) in
-                let controller = MainFabric.getGoalsTableViewController()
-                let navigationVC = UINavigationController(rootViewController: controller)
-                navigationVC.setViewControllers([controller], animated: true)
-                self.revealViewController().pushFrontViewController(navigationVC, animated: true)
-            }))
-            self.present(alert, animated: true, completion: nil)
+           showCongrats()
         }
+    }
+    
+    func showCongrats() {
+        let alert = UIAlertController(title: "Поздравляем", message: "Выполнено задание", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ура!", style: .default, handler: { (action) in
+            let controller = MainFabric.getGoalsTableViewController()
+            controller.fakeFlag = true
+            let navigationVC = UINavigationController(rootViewController: controller)
+            navigationVC.setViewControllers([controller], animated: true)
+            self.revealViewController().pushFrontViewController(navigationVC, animated: true)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     // MARK: - Table view data source
@@ -65,7 +70,7 @@ class TasksTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let task = tasks[indexPath.row]
         
-        return task.isDone ? 65.0 : 100.0
+        return task.isDone ? 60.0 : 100.0
     }
     
     
@@ -121,7 +126,7 @@ extension TasksTableViewController: BaseCellProtocol {
         if let index = tasks.index(where: { $0.id == task.id }) {
             tasks[index] = task
             self.dismissKeyboard()
-
+            self.checkTasks()
             self.tableView.reloadData()
         }
     }
@@ -136,6 +141,7 @@ extension TasksTableViewController: QRViewControllerProtocol {
             let newTask = tasks[index]
             if newTask.result == result {
                 tasks[index].isDone = true
+                self.checkTasks()
                 self.dismissKeyboard()
                 self.tableView.reloadData()
             }

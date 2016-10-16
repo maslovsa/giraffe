@@ -11,6 +11,8 @@ import UIKit
 class GoalsTableViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
     var goals = [GoalItem]()
+    var fakeFlag = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +27,14 @@ class GoalsTableViewController: UITableViewController {
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        //
+        if fakeFlag {
+            fakeFlag = false
+            goals[0].current = goals[0].current + 1
         }
     }
 
