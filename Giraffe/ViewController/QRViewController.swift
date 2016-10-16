@@ -10,8 +10,12 @@
 import UIKit
 import AVFoundation
 
-class QRViewController: BaseRevealViewController, AVCaptureMetadataOutputObjectsDelegate {
-    
+protocol QRViewControllerProtocol: class {
+    func didFound(result: String)
+}
+
+class QRViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+    weak var delegate: QRViewControllerProtocol?
     @IBOutlet weak var messageLabel:UILabel!
     
     var captureSession:AVCaptureSession?
@@ -23,6 +27,10 @@ class QRViewController: BaseRevealViewController, AVCaptureMetadataOutputObjects
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let camera = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(QRViewController.btnOpenCamera))
+        self.navigationController?.navigationItem.leftBarButtonItem = camera
         
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video
         // as the media type parameter.
@@ -77,6 +85,10 @@ class QRViewController: BaseRevealViewController, AVCaptureMetadataOutputObjects
         
     }
     
+    func btnOpenCamera() {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -105,8 +117,10 @@ class QRViewController: BaseRevealViewController, AVCaptureMetadataOutputObjects
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
+                delegate?.didFound(result: metadataObj.stringValue)
             }
         }
     }
+    
 }
 

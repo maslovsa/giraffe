@@ -344,7 +344,7 @@
             </objects>
             <point key="canvasLocation" x="1765" y="-686"/>
         </scene>
-        <!--QR-->
+        <!--View Controller-->
         <scene sceneID="SQv-OJ-gYm">
             <objects>
                 <viewController storyboardIdentifier="QRViewController" id="tg5-Lw-R2B" customClass="QRViewController" customModule="Giraffe" customModuleProvider="target" sceneMemberID="viewController">
@@ -378,11 +378,7 @@
                             <constraint firstItem="jf8-B2-S6w" firstAttribute="top" secondItem="91e-o0-JyW" secondAttribute="bottom" id="zgu-Ke-BHc"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="QR" id="KR0-1E-Ikg">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="TkP-54-9e1"/>
-                    </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="TkP-54-9e1" id="KOB-oQ-rbf"/>
                         <outlet property="messageLabel" destination="91e-o0-JyW" id="pqv-YS-vdi"/>
                     </connections>
                 </viewController>
@@ -603,10 +599,13 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="sg5-VT-L7K"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="menuButton" destination="sg5-VT-L7K" id="zmt-tK-Wyo"/>
+                        <outlet property="menuButton" destination="sg5-VT-L7K" id="ShH-92-R4o"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wWG-tF-ciJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Поиск" id="qXF-pY-Omo">
+                    <barButtonItem key="leftBarButtonItem" image="menu" id="4yZ-hh-2dd"/>
+                </navigationItem>
             </objects>
             <point key="canvasLocation" x="2576.8000000000002" y="53.523238380809602"/>
         </scene>

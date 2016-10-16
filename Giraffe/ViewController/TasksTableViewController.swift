@@ -12,6 +12,7 @@ import UIKit
 class TasksTableViewController: UITableViewController {
     @IBOutlet weak var menuButton:UIBarButtonItem!
     var tasks = [TaskItem]()
+    var taskForQR: TaskItem? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -78,7 +79,24 @@ class TasksTableViewController: UITableViewController {
 extension TasksTableViewController: QRCellProtocol {
     func didClickSearch(cell: QRCell) {
         let controller = MainFabric.getQRViewController()
-        self.present(controller, animated: true, completion: nil)
+        self.taskForQR = cell.task
+        controller.delegate = self
+        self.navigationController?.pushViewController(controller, animated: true)
+    }
+}
+
+extension TasksTableViewController: QRViewControllerProtocol {
+    func didFound(result: String) {
+        guard let task = taskForQR else { return}
+        
+        if let index = tasks.index(where: { $0.id == task.id }) {
+            let newTask = tasks[index]
+            if newTask.result == result {
+                tasks[index].isDone = true
+                self.tableView.reloadData()
+            }
+        }
+        
     }
 }
 
