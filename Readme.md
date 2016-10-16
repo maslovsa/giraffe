@@ -1,7 +1,7 @@
 Project for [Hackaton](http://penza.hackday.ru/) #hackday43
 
+I used:
 
-Uses:
 1. Swift 3
 
 2. Protocol-Oriented Programming
