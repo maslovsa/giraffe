@@ -35,7 +35,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
         AppEventsLogger.activate(application)
+        
+        if let viewController = self.window?.rootViewController {
+            if let revealViewController = viewController.revealViewController() {
+                let controller = MainFabric.getGoalsTableViewController()
+                let navigationVC = UINavigationController(rootViewController: controller)
+                navigationVC.setViewControllers([controller], animated: true)
+                revealViewController.pushFrontViewController(navigationVC, animated: true)
+            }
+        }
     }
 
 //    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
