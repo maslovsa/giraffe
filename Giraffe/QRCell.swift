@@ -8,15 +8,13 @@
 
 import UIKit
 
-protocol QRCellProtocol: class {
-    func didClickSearch(cell: QRCell)
-}
+
 
 class QRCell: BaseTaskCell {
     
     @IBOutlet weak var titleLabel:UILabel!
     @IBOutlet weak var excercise:UILabel!
-    weak var delegate: QRCellProtocol?
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

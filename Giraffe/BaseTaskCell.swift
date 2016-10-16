@@ -8,8 +8,14 @@
 
 import Foundation
 
+protocol BaseCellProtocol: class {
+    func didClickSearch(cell: BaseTaskCell)
+    func didUpdateState(cell: BaseTaskCell)    
+}
+
 class BaseTaskCell: UITableViewCell {
     var task: TaskItem?
+    weak var delegate: BaseCellProtocol?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,5 +39,16 @@ class BaseTaskCell: UITableViewCell {
         }
     }
     
+    func notifyBadAnswer(){
+        self.contentView.backgroundColor = UIColor.giraffeLightColor
+            
+        UIView.animate(withDuration: 0.7, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+            self.contentView.backgroundColor = UIColor.red
+            }, completion: { (Bool) -> () in
+                UIView.animate(withDuration: 0.3, delay: 0.0, options: UIViewAnimationOptions.curveEaseOut, animations: {
+                    self.contentView.backgroundColor = UIColor.giraffeLightColor
+                    }, completion: nil)
+        })
+    }
 }
 

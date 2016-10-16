@@ -28,12 +28,17 @@ class MathCell: BaseTaskCell {
         excercise.text = task.exercise
     }
     
+    
+    
     @IBAction func clickCheck(_ sender: AnyObject) {
         guard let task = task else { return }
         
         if let text = editResult.text {
             if text == task.result {
                 self.task?.isDone = true
+                delegate?.didUpdateState(cell: self)
+            } else {
+                self.notifyBadAnswer()
             }
         }
         // TODO:

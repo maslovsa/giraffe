@@ -35,7 +35,27 @@ class TasksTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func dismissKeyboard() {
+        print("dismiss keyboard")
+        for view in self.view.subviews {
+            if let inputView = view as? UITextField {
+                inputView.resignFirstResponder()
+            }
+        }
+    }
+    
     // MARK: - Table view data source
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let task = tasks[indexPath.row]
+        
+        return task.isDone ? 65.0 : 100.0
+    }
+    
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.dismissKeyboard()
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // Return the number of sections.
@@ -47,15 +67,9 @@ class TasksTableViewController: UITableViewController {
         return self.tasks.count
     }
     
-//    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        let task = tasks[indexPath.row]
-//        
-//        if task.type == .Math {
-//            return 100
-//        } else {
-//            return 500
-//        }
-//    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.dismissKeyboard()
+    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let task = tasks[indexPath.row]
@@ -63,7 +77,7 @@ class TasksTableViewController: UITableViewController {
         if task.type == .Math {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MathCell", for: indexPath) as! MathCell
             cell.configure(task)
-            
+            cell.delegate = self
             return cell
             
         } else {
@@ -76,13 +90,25 @@ class TasksTableViewController: UITableViewController {
     
 }
 
-extension TasksTableViewController: QRCellProtocol {
-    func didClickSearch(cell: QRCell) {
+extension TasksTableViewController: BaseCellProtocol {
+    func didClickSearch(cell: BaseTaskCell) {
         let controller = MainFabric.getQRViewController()
         self.taskForQR = cell.task
         controller.delegate = self
         self.navigationController?.pushViewController(controller, animated: true)
     }
+    
+    func didUpdateState(cell: BaseTaskCell) {
+        guard let task = cell.task else { return}
+
+        if let index = tasks.index(where: { $0.id == task.id }) {
+            tasks[index] = task
+            self.dismissKeyboard()
+
+            self.tableView.reloadData()
+        }
+    }
+
 }
 
 extension TasksTableViewController: QRViewControllerProtocol {
@@ -93,6 +119,7 @@ extension TasksTableViewController: QRViewControllerProtocol {
             let newTask = tasks[index]
             if newTask.result == result {
                 tasks[index].isDone = true
+                self.dismissKeyboard()
                 self.tableView.reloadData()
             }
         }
