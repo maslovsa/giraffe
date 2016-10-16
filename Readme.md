@@ -20,8 +20,6 @@ I used in Mobile Application:
 
 # Our team
 
-![Our team]
+![Our team](https://api.monosnap.com/rpc/file/download?id=Scvqj8WB8gWOTKoCjlKqVoxErHbHl0)
 
-(https://api.monosnap.com/rpc/file/download?id=Scvqj8WB8gWOTKoCjlKqVoxErHbHl0)
-
-(https://api.monosnap.com/rpc/file/download?id=bBwy4zMslu0X8OBJE0gXcBI0rZ4Fr5)
+![Our team](https://api.monosnap.com/rpc/file/download?id=bBwy4zMslu0X8OBJE0gXcBI0rZ4Fr5)
