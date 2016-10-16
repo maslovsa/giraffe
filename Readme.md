@@ -20,6 +20,6 @@ I used in Mobile Application:
 
 # Our team
 
-![Our team](https://pp.vk.me/c626123/v626123292/2da9f/ecmJCv37I1U.jpg)
+![Our team](https://api.monosnap.com/rpc/file/download?id=Scvqj8WB8gWOTKoCjlKqVoxErHbHl0)
 
 
